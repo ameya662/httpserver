@@ -1,0 +1,18 @@
+.PHONY: run
+
+# set port to default port if port is not specified in command line
+ifeq ($(PORT),)
+PORT = 8080
+endif
+
+build:
+		docker build -t my-py-server-image .
+
+run-prod: 
+		docker run --rm -it --name py-server --env PORT=$(PORT) -p 7000:$(PORT) my-py-server-image
+
+run-dev:
+		python3 server.py --port ${PORT}
+
+bash:
+		docker exec -it py-server bash
