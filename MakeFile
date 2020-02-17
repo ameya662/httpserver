@@ -21,6 +21,6 @@ help:
 		@echo 'Usage: make [TARGET] [EXTRA_ARGUMENTS]'
 		@echo 'Targets:'
 		@echo '  build    	build docker --image--'
-		@echo '  run-prod  	runs the python server inside a docker --container--'
-		@echo '  run-dev    runs the python server locally, requires python v.3.8'
+		@echo '  run-prod  	runs the python server inside a docker --container-- with the port argument from command line'
+		@echo '  run-dev    runs the python server locally, requires python v.3.8 the port argument from command line'
 		@echo '  bash   	get inside the docker container which was previously run with make run-prod'
