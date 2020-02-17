@@ -1,0 +1,4 @@
+FROM python:latest
+COPY . /app
+RUN apt-get update && cd /app
+CMD [ "sh", "-c", "python /app/server.py --port ${PORT}" ]
