@@ -16,3 +16,11 @@ run-dev:
 
 bash:
 		docker exec -it py-server bash
+
+help:
+		@echo 'Usage: make [TARGET] [EXTRA_ARGUMENTS]'
+		@echo 'Targets:'
+		@echo '  build    	build docker --image--'
+		@echo '  run-prod  	runs the python server inside a docker --container--'
+		@echo '  run-dev    runs the python server locally, requires python v.3.8'
+		@echo '  bash   	get inside the docker container which was previously run with make run-prod'
