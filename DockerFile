@@ -1,4 +1,5 @@
 FROM python:latest
 COPY . /app
+ENV PORT 8080
 RUN apt-get update && cd /app
 CMD [ "sh", "-c", "python /app/server.py --port ${PORT}" ]
